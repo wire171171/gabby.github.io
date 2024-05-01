@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabby - AI-Driven Document Automation Tool</title>
+    <meta name="description" content="Gabby transforms your document management with advanced AI, making it faster and more efficient. Perfect for businesses looking to improve productivity.">
+    <link rel="canonical" href="https://www.gabbydoc.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.gabbydoc.com/">
+    <meta property="og:title" content="Gabby - AI-Driven Document Automation Tool">
+    <meta property="og:description" content="Gabby transforms your document management with advanced AI, making it faster and more efficient. Perfect for businesses looking to improve productivity.">
+    <meta property="og:image" content="https://www.gabbydoc.com/image-path/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.gabbydoc.com/">
+    <meta property="twitter:title" content="Gabby - AI-Driven Document Automation Tool">
+    <meta property="twitter:description" content="Gabby transforms your document management with advanced AI, making it faster and more efficient. Perfect for businesses looking to improve productivity.">
+    <meta property="twitter:image" content="https://www.gabbydoc.com/image-path/twitter-card-image.jpg">
+    <style>
+		:root {
+			--primary-color: #9055FF; /* A softer purple */
+			--secondary-color: #EFA8FF; /* Soft Pink */
+			--hover-color: #7F3FBF; /* A darker shade for hover effects */
+			--background-color: #f4f4f8; /* Light grey for a clean, neutral background */
+			--text-color: #333; /* Dark grey for strong readability */
+			--shadow-color: rgba(144, 85, 255, 0.25); /* Subtle purple shadow */
+			--accent-color: #8A2BE2; /* Blueviolet for a more coherent look */
+			--error-color: #ff3860; /* Bright red for clear attention signals */
+		}
+
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 25%, var(--secondary-color) 100%);
+            color: white;
+            padding: 20px 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0px 2px 5px var(--shadow-color);
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 16px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        nav ul li a:hover, nav ul li a:focus {
+            background-color: var(--accent-color);
+            border-radius: 4px;
+            transform: scale(1.05);
+        }
+
+        .hero {
+            width: 100%;
+            height: 450px;
+            overflow: hidden;
+            position:relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .hero h1 {
+            position: absolute;
+            z-index: 2;
+            color: white;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+
+		section {
+			margin: 20px;
+			padding: 20px;
+			background: white;
+			box-shadow: 0 4px 6px var(--shadow-color);
+			border-radius: 8px;
+			transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+		}
+
+		section:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 10px 15px var(--shadow-color);
+		}
+
+		footer {
+			text-align: center;
+			padding: 20px 20px;
+			background-color: var(--text-color);
+			color: white;
+			position: relative;
+			bottom: 0;
+			width: 100%;
+		}
+
+		input[type="text"], input[type="email"], textarea {
+			width: 100%;
+			padding: 8px;
+			margin-top: 5px;
+			border-radius: 4px;
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+		}
+
+		input[type="submit"] {
+			background-color: var(--primary-color);
+			color: white;
+			border: none;
+			padding: 10px 20px;
+			text-transform: uppercase;
+			margin-top: 10px;
+			cursor: pointer;
+			border-radius: 4px;
+			transition: background-color 0.2s;
+		}
+
+		input[type="submit"]:hover {
+			background-color: var(--hover-color);
+		}
+	</style>
+</head>
+<body>
+    <header>
+        <h1>Gabby</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="hero">
+        <video autoplay loop muted playsinline style="pointer-events: none;">
+            <source src="hero-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h1>Empower Your Documentation</h1>
+    </div>
+
+
+    <section id="home">
+        <h2>Automate Your Documents with Intelligence</h2>
+        <p>Experience the future of document automation. Gabby helps streamline the creation of marketing materials, usage documentation, and more through advanced AI technology.</p>
+    </section>
+
+	<section id="about">
+		<h2>About Gabby</h2>
+		<p>Gabby harnesses cutting-edge artificial intelligence to revolutionize document automation. Our platform is engineered to transform the way businesses handle their documentation processes, making them faster, smarter, and more efficient. At Gabby, we believe in empowering companies to focus on their core activities while we take care of the complexities of document management.</p>
+		<p>Founded by a team of AI enthusiasts and document management experts, Gabby is committed to innovation and excellence. Our AI-driven solutions are designed not only to automate but also to enhance the quality of document creation, ensuring precision and consistency across all your communications.</p>
+		<p>Our core values are centered around customer satisfaction, technological innovation, and accessible design. We strive to make our tools user-friendly, affordable, and adaptable to the unique needs of businesses of all sizes. Whether you're a startup looking to establish your documentation routines or a large corporation aiming to streamline complex operations, Gabby is here to support your journey towards digital transformation.</p>
+	</section>
+
+	<section id="features">
+		<h2>Explore Our Powerful Features</h2>
+		<p>Unlock the potential of your business with Gabby's wide range of document automation tools, designed to cater to various needs:</p>
+		<ul>
+			<li><strong>Industry Analysis:</strong> Analyze the current state of your industry, identifying trends, challenges, and opportunities. Includes data analysis, key player identification, and forecasts.</li>
+			<li><strong>Software Review:</strong> Provides detailed reviews of software to streamline business operations.</li>
+			<li><strong>Small Business Legislation:</strong> Offers insights into the impact of legislation and regulations on small businesses.</li>
+			<li><strong>Financing Options Guide:</strong> Explore various financing methods including loans, grants, and equity options.</li>
+			<li><strong>Financial Management Guide:</strong> Learn to manage your finances with tips on budgeting, cash flow management, and tax considerations.</li>
+			<li><strong>Networking Guide:</strong> Strategies for building effective business networks and partnerships.</li>
+			<li><strong>Meeting Agenda:</strong> Assistance in creating focused and productive meeting agendas for your team.</li>
+			<li><strong>Client Email Templates:</strong> Craft thoughtful and impactful emails to clients regarding project updates or changes.</li>
+			<li><strong>Product Roadmap:</strong> Develop strategic plans for product development, particularly in social media enhancements like Instagram.</li>
+			<li><strong>Investor Presentation:</strong> Prepare compelling presentations to attract and engage potential investors.</li>
+			<li>And many more specialized features tailored to support a variety of business activities, from email marketing to resume crafting and interview preparation.</li>
+		</ul>
+	</section>
+
+	<section id="pricing">
+		<h2>Affordable Pricing Plans</h2>
+		<p>Choose from our flexible pricing models that suit your business size and needs. Our plans are designed to provide value whether you're a small startup or a large enterprise. Enjoy special rates and discounts on annual commitments.</p>
+		<ul>
+			<li><strong>Basic Plan</strong>: $35/month - Ideal for small businesses, includes up to 50,000 tokens per month. Perfect for routine document handling and customer communications. Save 20% with an annual subscription.</li>
+			<li><strong>Premium Plan</strong>: $150/month - Designed for medium-sized businesses, includes up to 500,000 tokens per month, plus advanced features such as custom document templates, analytics, and API access. Save 20% with an annual subscription.</li>
+			<li><strong>Pay-As-You-Go</strong>: $0.03 per 100 tokens - Suitable for variable document generation needs. Ideal for occasional or unpredictable usage.</li>
+			<li><strong>Enterprise Solutions</strong>: Custom pricing - Contact us for solutions tailored to your business needs, with pricing based on larger or customized token allocations, dedicated support, and periodic business reviews.</li>
+		</ul>
+		<p>Start with a free trial and experience the capabilities of our AI-driven content generation tool firsthand!</p>
+	</section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+            <input type="submit" value="Send">
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Gabby Documentation. All rights reserved.</p>
+    </footer>
+</body>
+</html>
