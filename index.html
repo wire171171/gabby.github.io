@@ -61,6 +61,7 @@
 			overflow-x: auto; /* Enables horizontal scrolling */
 			white-space: nowrap; /* Prevents links from wrapping onto the next line */
 			background-color: rgba(0, 0, 0, 0); /* Example background color */
+			overflow: hidden;
 		}
 
 		nav ul li {
@@ -68,13 +69,17 @@
 		}
 
 		nav ul li a {
-			font-size: 16px; /* Default font size */
-			font-weight: bold; /* Bold font */
-			color: white; /* Text color */
-			text-decoration: none; /* Removes underline from links */
-			padding: 10px 15px; /* Padding around the links */
-			display: block; /* Allows padding to affect link area */
+			font-size: 16px;
+			font-weight: bold;
+			color: white;
+			text-decoration: none;
+			padding: 10px 15px;
+			display: block;
+			background-color: transparent; /* Ensure the default state has no background */
+			transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, border-radius 0.3s ease; /* Smooth transition for multiple properties */
+			border-radius: 10px; /* Consistent rounded corners even in default state */
 		}
+
 
 		/* Media query for smaller screens */
 		@media (max-width: 600px) {
@@ -86,7 +91,10 @@
 
 		/* Additional hover effect for links */
 		nav ul li a:hover {
-			background-color: #555; /* Darker background on hover */
+		    color: var(--secondary-color);
+			background-color: #673AB7; /* Darker background on hover */
+		    border-radius: 10px; /* Adds rounded corners on hover */
+			transform: scale(1.05); /* Slightly increase size on hover */
 		}
 
 
