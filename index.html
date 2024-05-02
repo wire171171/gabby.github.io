@@ -125,12 +125,19 @@
 			box-shadow: 0 4px 6px var(--shadow-color);
 			border-radius: 8px;
 			transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+		   	padding-top: 80px; /* Adjust this value based on your header's height */
+  		  	margin-top: -80px; /* This negative margin pulls the section back up to create a visual continuation */
+    			padding-bottom: 20px;
+    			box-sizing: border-box; /* Ensures padding does not add to the width */
 		}
 
 		@media (max-width: 800px) {
 			section {
 				margin: 10px; /* Reduces margin for smaller screens */
 				padding: 10px; /* Reduces padding for smaller screens */
+			        padding-top: 70px; /* Adjust padding for mobile view */
+        			margin-top: -70px;
+        			padding-bottom: 10px;
 			}
 		}
 
