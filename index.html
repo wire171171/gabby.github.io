@@ -267,26 +267,5 @@
     <footer>
         <p>&copy; 2024 Gabby Documentation. All rights reserved.</p>
     </footer>
-<script>
-    // Function to remove hover styles
-    function removeHoverStyles() {
-        const hoverElements = document.querySelectorAll('nav ul li a:hover');
-        hoverElements.forEach(el => {
-            el.style.backgroundColor = 'transparent';
-            el.style.color = 'white';  // Reset to default text color
-            el.style.transform = 'scale(1)';
-        });
-    }
-
-    // Event listener for touchend on navigation links
-    document.querySelectorAll('nav ul li a').forEach(link => {
-        link.addEventListener('touchend', () => {
-            // Set a timeout to remove hover styles after 500 milliseconds
-            setTimeout(removeHoverStyles, 500);
-        });
-    });
-</script>
-
-
 </body>
 </html>
