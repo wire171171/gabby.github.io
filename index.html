@@ -30,6 +30,7 @@
 			--shadow-color: rgba(144, 85, 255, 0.25); /* Subtle purple shadow */
 			--accent-color: #8A2BE2; /* Blueviolet for a more coherent look */
 			--error-color: #ff3860; /* Bright red for clear attention signals */
+			--header-height: 60px; /* Height of the header */
 		}
 
 		body {
@@ -44,12 +45,13 @@
 		header {
 			background: linear-gradient(135deg, var(--primary-color) 25%, var(--secondary-color) 100%);
 			color: white;
-			padding: 5px;
+			padding: 10px 20px;
 			text-align: center;
 			position: sticky;
 			top: 0;
 			z-index: 1000;
 			box-shadow: 0px 2px 5px var(--shadow-color);
+			height: var(--header-height);
 		}
 
 		/* Base styling for navigation links */
@@ -125,17 +127,17 @@
 			box-shadow: 0 4px 6px var(--shadow-color);
 			border-radius: 8px;
 			transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
-		   	padding-top: 80px; /* Adjust this value based on your header's height */
-  		  	margin-top: -80px; /* This negative margin pulls the section back up to create a visual continuation */
-    			padding-bottom: 20px;
-    			box-sizing: border-box; /* Ensures padding does not add to the width */
+	            	padding-top: calc(var(--header-height) + 20px); /* Added 20px for some breathing room */
+	            	margin-top: calc(var(--header-height) * -1);
+	            	padding-bottom: 20px;
+	            	box-sizing: border-box;
 		}
 
 		@media (max-width: 800px) {
 			section {
 				margin: 10px; /* Reduces margin for smaller screens */
 				padding: 10px; /* Reduces padding for smaller screens */
-			        padding-top: 70px; /* Adjust padding for mobile view */
+                		padding-top: calc(var(--header-height) + 10px);
         			margin-top: -70px;
         			padding-bottom: 10px;
 			}
