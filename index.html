@@ -39,12 +39,13 @@
 			background-color: var(--background-color);
 			color: var(--text-color);
 			overflow-x: hidden; /* Already in place to avoid horizontal scroll */
+			scroll-behavior: smooth;
 		}
 
 		header {
 			background: linear-gradient(135deg, var(--primary-color) 25%, var(--secondary-color) 100%);
 			color: white;
-			padding: 5px;
+			padding: 1px;
 			text-align: center;
 			position: sticky;
 			top: 0;
@@ -91,7 +92,7 @@
 
         .hero {
             width: 100%;
-            height: 450px;
+            height: 400px;
             overflow: hidden;
             position:relative;
             display: flex;
@@ -125,14 +126,17 @@
 			box-shadow: 0 4px 6px var(--shadow-color);
 			border-radius: 8px;
 			transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+			scroll-margin-top: 150px; /* Adjust this value as needed to fit your header */
 		}
 
 		@media (max-width: 800px) {
 			section {
 				margin: 10px; /* Reduces margin for smaller screens */
 				padding: 10px; /* Reduces padding for smaller screens */
+				scroll-margin-top: 140px; /* Adjust scroll-margin for smaller screens if the header size changes */
 			}
 		}
+
 
 		/* Footer remains largely unchanged */
 		footer {
