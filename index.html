@@ -52,33 +52,42 @@
 			box-shadow: 0px 2px 5px var(--shadow-color);
 		}
 
+		/* Base styling for navigation links */
 		nav ul {
-			list-style-type: none;
-			padding: 0;
-			display: flex;
-			justify-content: center;
-			gap: 20px;
+			list-style-type: none; /* Removes bullet points from the list */
 			margin: 0;
-			flex-wrap: wrap; /* Allows nav items to wrap on small screens */
+			padding: 0;
+			overflow-x: auto; /* Enables horizontal scrolling */
+			white-space: nowrap; /* Prevents links from wrapping onto the next line */
+			background-color: rgba(0, 0, 0, 0); /* Example background color */
+		}
+
+		nav ul li {
+			display: inline-block; /* Aligns items horizontally */
 		}
 
 		nav ul li a {
-			color: white;
-			text-decoration: none;
-			font-weight: bold;
-			padding: 8px 16px;
-			transition: background-color 0.3s, transform 0.2s;
+			font-size: 16px; /* Default font size */
+			font-weight: bold; /* Bold font */
+			color: white; /* Text color */
+			text-decoration: none; /* Removes underline from links */
+			padding: 10px 15px; /* Padding around the links */
+			display: block; /* Allows padding to affect link area */
 		}
 
+		/* Media query for smaller screens */
 		@media (max-width: 600px) {
-			nav ul {
-				flex-direction: column; /* Stack nav items vertically on small screens */
-			}
-
 			nav ul li a {
-				display: block; /* Makes each link expand to full width of its container */
+				font-size: 14px; /* Smaller font size for small screens */
+				padding: 8px 10px; /* Smaller padding for small screens */
 			}
 		}
+
+		/* Additional hover effect for links */
+		nav ul li a:hover {
+			background-color: #555; /* Darker background on hover */
+		}
+
 
         .hero {
             width: 100%;
