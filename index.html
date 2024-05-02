@@ -268,25 +268,25 @@
         <p>&copy; 2024 Gabby Documentation. All rights reserved.</p>
     </footer>
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-    const links = document.querySelectorAll('nav ul li a');
+    // Function to remove hover styles
+    function removeHoverStyles() {
+        const hoverElements = document.querySelectorAll('nav ul li a:hover');
+        hoverElements.forEach(el => {
+            el.style.backgroundColor = 'transparent';
+            el.style.color = 'white';  // Reset to default text color
+            el.style.transform = 'scale(1)';
+        });
+    }
 
-    links.forEach(link => {
-        link.addEventListener('touchstart', function() {
-            // Remove from any currently active links
-            links.forEach(lnk => lnk.classList.remove('hover-effect'));
-
-            // Add 'hover-effect' class
-            this.classList.add('hover-effect');
-
-            // Set timeout to remove class after 500ms
-            setTimeout(() => {
-                this.classList.remove('hover-effect');
-            }, 500);
+    // Event listener for touchend on navigation links
+    document.querySelectorAll('nav ul li a').forEach(link => {
+        link.addEventListener('touchend', () => {
+            // Set a timeout to remove hover styles after 500 milliseconds
+            setTimeout(removeHoverStyles, 500);
         });
     });
-});
 </script>
+
 
 </body>
 </html>
